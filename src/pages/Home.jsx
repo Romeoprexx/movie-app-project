@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import { Link } from 'react-router-dom';
 
 import { OutlineButton } from '../components/button/Button';
@@ -6,8 +6,17 @@ import HeroSlide from '../components/hero-slide/HeroSlide';
 import MovieList from '../components/movie-list/MovieList';
 
 import { category, movieType, tvType } from '../api/tmdbApi';
+import WatchList from '../components/watchlist/WatchList';
+import MovieCard from '../components/movie-card/MovieCard';
+import { ResultCard } from '../components/movie-card/ResultCard';
+import { GlobalContext } from '../context/GlobalState';
 
-const Home = () => {
+
+
+const Home = (props) => {
+    
+    const item = props
+    const watchlist = useContext(GlobalContext);
     return (
         <>
             <HeroSlide/>
@@ -50,6 +59,15 @@ const Home = () => {
                         </Link>
                     </div>
                     <MovieList category={category.tv} type={tvType.top_rated}/>
+                </div>
+                <div className="section mb-3">
+                    <div className="section__header mb-2">
+                        <h2>Favourites</h2>
+                        <Link to="/watchlist">
+                            <OutlineButton className="small">View more</OutlineButton>
+                        </Link>
+                    </div>
+                    <MovieList category={category.watchlist} key={watchlist.watchlist}/>
                 </div>
             </div>
         </>

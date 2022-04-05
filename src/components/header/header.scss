@@ -1,4 +1,5 @@
 @use "../../scss/" as *;
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Inline+One&family=Benne&family=Bitter&family=Charm&family=Charmonman&family=Emilys+Candy&family=Galada&family=Irish+Grover&family=Lato:wght@300&family=Luckiest+Guy&family=Mountains+of+Christmas&family=Odibee+Sans&family=Orbitron:wght@500&family=Road+Rage&display=swap');
 
 .logo {
     font-size: 2.5rem;
@@ -8,10 +9,11 @@
 
     img {
         margin-right: 10px;
-        width: 50px;
+        width: 200px;
+        margin-top: 30px;
 
         @include mobile {
-            width: 30px;
+            width: 100px;
             margin-right: 0;
         }
     }
@@ -52,7 +54,8 @@
             padding: 5px 0;
             font-weight: 700;
             position: relative;
-            font-size: 1.5rem;
+            font-size: 2.5rem;
+            font-family: 'Road Rage', cursive;
 
             &::after {
                 content: "";
@@ -72,6 +75,7 @@
             }
         }
 
+       
         @include mobile {
             position: fixed;
             bottom: 0;

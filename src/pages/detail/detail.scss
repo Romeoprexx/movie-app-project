@@ -75,6 +75,7 @@
         .genres {
             & > * ~ * {
                 margin-left: 0.5rem;
+                
             }
 
             &__item {
@@ -84,6 +85,31 @@
                 font-size: 0.8rem;
                 font-weight: 600;
                 background-color: $body-bg;
+
+            }
+            
+        }
+
+        
+
+        
+
+        .genres__item{
+            grid-column: 1;
+            grid-row: 1;
+            z-index: 1;
+            font-family: 'Teko', sans-serif;
+            text-transform: uppercase;
+            animation: glow 2s ease-in-out infinite alternate;
+            color: #4db1bc;
+
+            @keyframes glow {
+                from {
+                  text-shadow: 0 0 10px #2d9da9;
+                }
+                to {
+                  text-shadow: 0 0 10px #34b3c1, 0 0 10px #4dbbc7;
+                }
             }
         }
     }

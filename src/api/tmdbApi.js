@@ -1,20 +1,25 @@
+
 import axiosClient from "./axiosClient";
 
 export const category = {
     movie: 'movie',
-    tv: 'tv'
+    tv: 'tv',
+    watchlist: 'watchlist'
+  
 }
 
 export const movieType = {
     upcoming: 'upcoming',
     popular: 'popular',
-    top_rated: 'top_rated'
+    top_rated: 'top_rated',
+    favourite: 'favourite'
 }
 
 export const tvType = {
     popular: 'popular',
     top_rated: 'top_rated',
-    on_the_air: 'on_the_air'
+    on_the_air: 'on_the_air',
+    favourite: 'favourite'
 }
 
 const tmdbApi = {

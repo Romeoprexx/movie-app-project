@@ -5,6 +5,7 @@ import { Route, Switch } from 'react-router-dom';
 import Home from '../pages/Home';
 import Catalog from '../pages/Catalog';
 import Detail from '../pages/detail/Detail';
+import WatchList from '../components/watchlist/WatchList';
 
 const Routes = () => {
     return (
@@ -25,6 +26,11 @@ const Routes = () => {
                 path='/'
                 exact
                 component={Home}
+            />
+            <Route 
+               exact path='/'
+               component={WatchList}
+            
             />
         </Switch>
     );

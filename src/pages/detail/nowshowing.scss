@@ -1,0 +1,14 @@
+@use "../../scss/" as *;
+
+.cinemas {
+    display: flex;
+
+    .imagine {
+        width: 70px;
+        cursor: pointer;
+    }
+    @include mobile {
+        width: 100%;
+        padding-left: 0;
+    }
+}

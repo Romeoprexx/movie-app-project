@@ -8,6 +8,7 @@
     padding-top: 160%;
     border-radius: $border-radius;
     margin-bottom: 1rem;
+    
 
     .btn {
         position: absolute;
@@ -15,6 +16,11 @@
         left: 50%;
         transform: translate(-50%, -50%) scale(0);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    
+    &:hover {
+        transform: scale(.9);
     }
 
     &::before {
@@ -30,6 +36,8 @@
         border-radius: $border-radius;
     }
 
+   
+
     @media (hover: hover) and (pointer: fine) {
         &:hover::before {
             opacity: 0.8;
@@ -38,5 +46,91 @@
         &:hover .btn {
             transform: translate(-50%, -50%) scale(1);
         }
+    }
+}
+.movie-card:hover .overlay {
+    opacity: 1;
+}
+.overlay{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background: rgba(0,0,0,0.8);
+    transition: 0.5s ease;
+    opacity: 0;
+    bottom: 0;
+    font-size: 15px;
+    padding: 20px;
+    width: 100%;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.halo {
+    display: flex;
+    top: -19rem;;
+    position: relative;
+   
+}
+
+.bx-heart {
+    cursor: pointer;
+    font-size: 1.6rem;
+    font-weight: 800;
+    margin-left: 1rem;
+   
+    &:active {
+        color: red;
+        
+    }
+}
+
+.button{
+    padding: 6px;
+    border-radius: 50%;
+    outline: none;
+    border: none;
+    color: #eeeeee;
+    cursor: pointer;
+    display: inline-block;
+    font-family: sans-serif;
+    font-weight: 700;
+    margin-left: 7rem;
+}
+
+@keyframes glowing {
+    0% {
+      background-color: #2ba805;
+      box-shadow: 0 0 5px #2ba805;
+    }
+    50% {
+      background-color: #49e819;
+      box-shadow: 0 0 20px #49e819;
+    }
+    100% {
+      background-color: #2ba805;
+      box-shadow: 0 0 5px #2ba805;
+    }
+  }
+  .button {
+    animation: glowing 1300ms infinite;
+}
+
+
+@include mobile {
+    .halo{
+        margin-top: -9em !important;
+        margin-left: 3rem;
+    }
+    .button{
+        padding: 3px;
+    }
+
+    .bx-heart{
+        font-size: 20px;
     }
 }

@@ -9,6 +9,7 @@ import CastList from './CastList';
 import VideoList from './VideoList';
 
 import MovieList from '../../components/movie-list/MovieList';
+import NowShowing from './NowShowing';
 
 const Detail = () => {
 
@@ -52,6 +53,12 @@ const Detail = () => {
                                         <h2>Casts</h2>
                                     </div>
                                     <CastList id={item.id}/>
+                                </div>
+                                <div className="cast">
+                                    <div className="section__header">
+                                        <h2>Now Showing On</h2>
+                                    </div>
+                                    <NowShowing/>
                                 </div>
                             </div>
                         </div>

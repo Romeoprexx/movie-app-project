@@ -1,11 +1,15 @@
 @use "../../scss/" as *;
 
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Inline+One&family=Benne&family=Bitter&family=Charm&family=Charmonman&family=Emilys+Candy&family=Galada&family=Irish+Grover&family=Lato:wght@300&family=Luckiest+Guy&family=Mountains+of+Christmas&family=Odibee+Sans&family=Orbitron:wght@500&family=Road+Rage&display=swap');
+
 .footer {
     position: relative;
-    padding: 6rem 2rem;
+    padding: 4rem 2rem;
     background-position: top;
     background-size: cover;
     background-repeat: no-repeat;
+    font-family: 'Odibee Sans', cursive;
+
 
     &__content {
         max-width: 1000px;
@@ -22,6 +26,11 @@
             @include mobile {
                 grid-template-columns: repeat(2, 1fr);
             }
+        }
+
+        h3{
+            text-transform: uppercase;
+            color: $main-color;
         }
 
         &__menu {
